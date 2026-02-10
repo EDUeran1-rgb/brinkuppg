@@ -3,7 +3,7 @@ require_once("asset.php");
 if(isset($_POST["btn_login"])){
     $user = $_POST["user"];
     $pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
-    $sql = "SELECT * FROM tbl_users WHERE (username='$user' AND password='$pass')";
+    $sql = "SELECT * FROM tbl_user WHERE (username='$user' AND password='$pass')";
     $result = mysqli_query($conn,$sql);
     if(mysqli_num_rows($result) === 1){
         $row = mysqli_fetch_assoc($result);
@@ -22,4 +22,5 @@ if(isset($_POST["btn_login"])){
     header("location:index.php");
 
 }
+
 ?>
