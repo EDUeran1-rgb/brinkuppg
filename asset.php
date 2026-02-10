@@ -14,6 +14,7 @@ function islevel($level){
         }else{
             return false;
         }
+    }
 }
 
 
