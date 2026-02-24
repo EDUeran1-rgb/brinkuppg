@@ -2,9 +2,10 @@
 <?php require_once("asset.php"); ?>
 <?php
 $mess="";
-if(isset($_SESSION["mess"])){
-    $mess=$_SESSION["mess"];
+if(isset($_SESSION['mess'])){
+    $mess=$_SESSION['mess'];
 }
+
 ?>
 <html lang="en">
 <head>
@@ -15,18 +16,20 @@ if(isset($_SESSION["mess"])){
 </head>
 <body>
     <header>
-        <h1>Drinks </h1>
+        <h1>Drinks</h1>
     </header>
 <?php require_once("_nav.php"); ?>
     <main>
-        <h1><?=$mess;?></h1>   
+<h1><?=$mess;?></h1>
     </main>
 <?php require_once("_footer.php"); ?>
-    <dialog id ="login" popover>
+    <dialog id="login" popover>
         <form action="_login.php" method="POST">
-            <input type="text" name="user" placeholder="username" required>
-            <input type="password" name="pass" placeholder="password" required>
-            <input type="submit" name="btn_login" value="log in">
+            <label for="user">Username</label>
+            <input type="text" name="user" placeholder="Username" required>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" placeholder="Password" required>
+            <input type="submit" name="btn_login" value="Log in">
         </form>
     </dialog>
 </body>
