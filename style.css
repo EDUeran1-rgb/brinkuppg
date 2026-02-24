@@ -34,6 +34,8 @@ nav{
 }
 main{
     flex-grow:5;
+    
+    
 
 }
 footer{
@@ -63,4 +65,40 @@ dialog form{
     display: grid;
 
 }
+summary{
+    display:flex;
+    width:100%;
+    background: #49494987;
+    padding: .5rem;
+    
+}
+.id{
+    width:40px;
+    font-weight: bold;
+}
+.user{
+    flex-grow:1;
+}
+.level{
+    font-weight: bold;
 
+}
+.realname{
+    font-size:130%;
+    font-weight: bold;
+
+}
+.mail{
+    font-size:80%;
+    text-decoration: none;
+}
+details{
+    background: #89898987;
+    width: 50%;
+    
+}
+details .userdetails{
+    display: flex;
+
+
+}

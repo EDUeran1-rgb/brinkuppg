@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <?php require_once("asset.php"); ?>
 <?php
-
+$mess="";
+if(isset($_SESSION["mess"])){
+    $mess=$_SESSION["mess"];
+}
 ?>
 <html lang="en">
 <head>
@@ -15,7 +18,9 @@
         <h1>Drinks </h1>
     </header>
 <?php require_once("_nav.php"); ?>
-    <main></main>
+    <main>
+        <h1><?=$mess;?></h1>   
+    </main>
 <?php require_once("_footer.php"); ?>
     <dialog id ="login" popover>
         <form action="_login.php" method="POST">
